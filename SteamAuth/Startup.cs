@@ -33,14 +33,7 @@ namespace SteamAuth
 
             var options = new SteamAuthenticationOptions
             {
-                ApplicationKey = key,
-                Provider = new OpenIDAuthenticationProvider
-                {
-                    OnAuthenticated = context =>
-                    {
-                        return Task.FromResult(true);
-                    }
-                }
+                ApplicationKey = key
             };
 
             app.UseSteamAuthentication(options);
