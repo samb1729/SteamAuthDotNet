@@ -1,0 +1,18 @@
+﻿@model long?
+@{
+    ViewBag.Title = "Home Page";
+    
+}
+
+<div class="jumbotron">
+    <h1>Steam authentication</h1>
+    <p class="lead">Hopefully this works</p>
+    @Html.ActionLink("Authenticate with Steam", "AuthoriseSteam", null, new { @class = "btn btn-primary btn-lg" })
+</div>
+
+
+@if (Model != null)
+{
+    <h2>Steam ID</h2>
+    <p>@Model</p>
+}
