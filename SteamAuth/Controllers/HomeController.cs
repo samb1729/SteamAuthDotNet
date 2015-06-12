@@ -14,7 +14,6 @@ namespace SteamAuth.Controllers
         {
             long? steamid = null;
 
-
             var authenticateResult =
                 await HttpContext.GetOwinContext().Authentication.AuthenticateAsync("ExternalCookie");
 
